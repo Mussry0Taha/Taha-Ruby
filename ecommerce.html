@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1></h1>
+            </div>
+            <div class="cart">
+                <button onclick="toggleCart()">View Cart (<span id="cart-count">0</span>)</button>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Taha And Ruby Store 😊</h2>
+            <p>For Better Taste </p>
+            
+
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <h3>Browse our Category</h3>
+        <div class="category-list">
+            <div class="category-item" onclick="scrollToCategory('phones')">Phones</div>
+            <div class="category-item" onclick="scrollToCategory('laptops')">Laptops</div>
+            <div class="category-item" onclick="scrollToCategory('accessories')">Accessories</div>
+            <!-- Add more categories as necessary -->
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products">
+        <h3>Explore our Products</h3>
+        <div class="product-list">
+            <!-- Phones Products -->
+            <div id="phones" class="product-category">
+                <h4>Phones</h4>
+                <div class="product-grid">
+                    <div class="product-item">
+                        <img src="phone.jpg" alt="Product 1">
+                        <p>Phone</p>
+                        <span>$209.99</span>
+                        <button onclick="addToCart('Phone 1', 209.99)">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="phone2.jpg" alt="Product 2">
+                        <p>Phone</p>
+                        <span>$869.99</span>
+                        <button onclick="addToCart('Phone 2', 869.99)">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="phone3.jpg" alt="Product 2">
+                        <p>Phone</p>
+                        <span>$699.99</span>
+                        <button onclick="addToCart('Phone 2', 699.99)">Add to Cart</button>
+                    </div>
+                    <!-- Add more phone products as necessary -->
+                </div>
+            </div>
+
+            <!-- Laptops Products -->
+            <div id="laptops" class="product-category">
+                <h4>Laptops</h4>
+                <div class="product-grid">
+                    <div class="product-item">
+                        <img src="lap.jpg" alt="Laptop 1">
+                        <p>Laptop</p>
+                        <span>$999.99</span>
+                        <button onclick="addToCart('Laptop 1', 999.99)">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="lap2.jpg" alt="Laptop 2">
+                        <p>Laptop</p>
+                        <span>$1299.99</span>
+                        <button onclick="addToCart('Laptop 2', 1299.99)">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="lap3.jpg" alt="Laptop 2">
+                        <p>Laptop</p>
+                        <span>$599.99</span>
+                        <button onclick="addToCart('Laptop 2', 599.99)">Add to Cart</button>
+                    </div>
+                    <!-- Add more laptop products as necessary -->
+                </div>
+            </div>
+
+            <!-- Accessories Products -->
+            <div id="accessories" class="product-category">
+                <h4>Accessories</h4>
+                <div class="product-grid">
+                    <div class="product-item">
+                        <img src="accessories.jpg" alt="Headphone 1">
+                        <p>Accessory 1</p>
+                        <span>$49.99</span>
+                        <button onclick="addToCart('Accessory 1', 49.99)">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="accessories2.jpg" alt="Keyboard 1">
+                        <p>Accessory 2</p>
+                        <span>$89.99</span>
+                        <button onclick="addToCart('Accessory 2', 89.99)">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="accessories3.jpg" alt="Keyboard 1">
+                        <p>Accessory 2</p>
+                        <span>$19.99</span>
+                        <button onclick="addToCart('Accessory 2', 89.99)">Add to Cart</button>
+                    </div>
+                    <!-- Add more accessory products as necessary -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <section class="cart-modal" id="cart-modal" style="display:none;">
+        <h3>Your Cart</h3>
+        <div id="cart-items">
+            <p>Your cart is empty</p>
+        </div>
+        <button onclick="checkout()">Checkout</button>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
